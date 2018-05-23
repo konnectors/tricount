@@ -1,3 +1,61 @@
+/* COZY */
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const dom = new JSDOM(`<!DOCTYPE html><head>
+  <meta name="gwt:property" id="tricount:key" content="onrVQifaPFFUrhqOB">
+</head>
+<body>
+  <table>
+    <tbody>
+      <td id='slot1'></td>
+    </tbody>
+  </table>
+</body>
+`, {
+  url: "https://api.tricount.com",
+  referrer: "https://api.tricount.com",
+  contentType: "text/html",
+  userAgent: "safari",
+  includeNodeLocations: true
+});
+
+var $wnd = dom.window
+
+$wnd.com_tribab_tricount_Application = {
+  __sendStats: function () {},
+  __moduleBase: "https://api.tricount.com/com.tribab.tricount.Application/",
+  __moduleName: 'com.tribab.tricount.Application'
+
+}
+
+$wnd.encodeURI = function () {
+  return ''
+}
+
+navigator = {
+  userAgent: 'safari'
+}
+
+const document = dom.window.document
+
+
+const gwtObjToPOJ = gwtObj => {
+  const res = {}
+  Object.entries(gwtObj.hashCodeMap.backingMap).forEach(([k, v]) => {
+    res[k] = v[0].value_0
+  })
+  return res
+}
+
+const parse = function (iResult) {
+  const transactions = gwtObjToPOJ(iResult.transactions)
+  Object.values(transactions).forEach(transaction => {
+    console.log(transaction.name_0, 'paid by', transaction.payedBy.name_0, ':', transaction.amount)
+  })
+}
+/* --- END COZY --- */
+
+
 var $wnd = $wnd || window.parent;
 var __gwtModuleFunction = $wnd.com_tribab_tricount_Application;
 var $sendStats = __gwtModuleFunction.__sendStats;
@@ -15849,6 +15907,13 @@ _.onSuccess = function onSuccess(iResult){
   $onSuccess(this, dynamicCast(iResult, 740));
 }
 ;
+
+
+/* COZY */
+_.onSuccess = function (iResult) {
+  parse(iResult)
+}
+/* END COZY */
 
 var Lcom_tribab_tricount_client_comm_TricountCommController$1_2_classLit = createForClass('com.tribab.tricount.client.comm', 'TricountCommController/1', 296);
 function $onEvent_5(this$static, parameter){
