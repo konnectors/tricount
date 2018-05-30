@@ -67,7 +67,6 @@ exports[`tricount transformer should transform the tricount script so that it ca
                 
 
 
-            // Adds the meta tag to control which Tricount is fetched
             TricountCommController$1.prototype.onSuccess = function (iResult) {
                 onSuccess(iResult)
             }

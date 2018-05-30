@@ -114,7 +114,7 @@ const transformer = function(file, api) {
       path.node
     ])
 
-    // Now we add to the body of the function the monkey patching
+    // Now, let's add to the body of the exported function the monkey patching
     // of the Tricount controller.
     const functionBlock = j(functionDeclaration)
       .find(j.BlockStatement)
@@ -123,7 +123,6 @@ const transformer = function(file, api) {
     // Replaces the onSuccess/onFailure of the Tricount controller with our methods
     // These methods are passed as callbacks to the exported function.
     functionBlock.body.unshift(`
-// Adds the meta tag to control which Tricount is fetched
 TricountCommController$1.prototype.onSuccess = function (iResult) {
     ${onSuccessIdentifier}(iResult)
 }
