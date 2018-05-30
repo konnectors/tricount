@@ -1,14 +1,15 @@
 // THIS FILE IS GENERATED AUTOMATICALLY BY generate.js
 
-/* eslint-disable */
+    /* eslint-disable */
 
 /**
  * This file will be inserted before the Tricount script, it builds a JSDom home
  * for the script.
  */
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><head>
+const jsdom = require('jsdom')
+const { JSDOM } = jsdom
+const dom = new JSDOM(
+  `<!DOCTYPE html><head>
 </head>
 <body>
   <table>
@@ -17,32 +18,33 @@ const dom = new JSDOM(`<!DOCTYPE html><head>
     </tbody>
   </table>
 </body>
-`, {
-  url: "https://api.tricount.com", // Necessary for cross-site
-  referrer: "https://api.tricount.com", // Necessary for cross-site
-  contentType: "text/html",
-  userAgent: "safari",
-  includeNodeLocations: true
-});
+`,
+  {
+    url: 'https://api.tricount.com', // Necessary for cross-site
+    referrer: 'https://api.tricount.com', // Necessary for cross-site
+    contentType: 'text/html',
+    userAgent: 'safari',
+    includeNodeLocations: true
+  }
+)
 
 var $wnd = dom.window
 
 $wnd.com_tribab_tricount_Application = {
-  __sendStats: function () {},
-  __moduleBase: "https://api.tricount.com/com.tribab.tricount.Application/",
+  __sendStats: function() {},
+  __moduleBase: 'https://api.tricount.com/com.tribab.tricount.Application/',
   __moduleName: 'com.tribab.tricount.Application'
-
 }
 
-$wnd.encodeURI = function () {
+$wnd.encodeURI = function() {
   return ''
 }
 
-navigator = {
+navigator = { // eslint-disable-line
   userAgent: 'safari'
 }
 
-const document = dom.window.document
+const document = dom.window.document // eslint-disable-line
 
 
 var $wnd = $wnd || window.parent;
@@ -1755,7 +1757,7 @@ function runScheduledTasks(tasks, rescheduled){
         e = $e0;
         reportToBrowser(instanceOf(e, 72)?dynamicCast(e, 72).getThrown():e);
       }
-       else
+       else 
         throw unwrap($e0);
     }
   }
@@ -3485,7 +3487,7 @@ function $fireEvent(this$static, event_0){
       e = $e0;
       throw new UmbrellaException_0(e.causes);
     }
-     else
+     else 
       throw unwrap($e0);
   }
    finally {
@@ -3558,7 +3560,7 @@ function $doFire(this$static, event_0){
           !causes && (causes = new HashSet);
           $add_12(causes, e);
         }
-         else
+         else 
           throw unwrap($e0);
       }
     }
@@ -3777,7 +3779,7 @@ function $doSend(this$static, requestData, callback){
       $initCause(requestPermissionException, new RequestException(e.getMessage()));
       throw requestPermissionException;
     }
-     else
+     else 
       throw unwrap($e0);
   }
   $setHeaders(this$static, xmlHttpRequest);
@@ -3793,7 +3795,7 @@ function $doSend(this$static, requestData, callback){
       e = $e1;
       throw new RequestException(e.getMessage());
     }
-     else
+     else 
       throw unwrap($e1);
   }
   return request;
@@ -3820,7 +3822,7 @@ function $setHeaders(this$static, xmlHttpRequest){
           e = $e0;
           throw new RequestException(e.getMessage());
         }
-         else
+         else 
           throw unwrap($e0);
       }
     }
@@ -7046,7 +7048,7 @@ function $onTouchMove(this$static, event_0){
       $setTemporalPoint(this$static.recentTouchPosition, this$static.recentTouchPositionOnDeck.point, this$static.recentTouchPositionOnDeck.time);
       this$static.recentTouchPositionOnDeck = null;
     }
-     else
+     else 
       trackingTime > 100 && !this$static.recentTouchPositionOnDeck && (this$static.recentTouchPositionOnDeck = new TouchScroller$TemporalPoint_0(touchPoint, touchTime));
   }
 }
@@ -8467,7 +8469,7 @@ function instantiate_25(streamReader){
       e = $e0;
       throw new SerializationException(e.___clazz$ + ':' + e);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -8738,7 +8740,7 @@ function $doInvoke(this$static, responseReader, methodName, statsContext, reques
       iex = new InvocationException_0('Unable to initiate the asynchronous service invocation (' + methodName + ') -- check the network connection', ex);
       callback.onFailure(iex);
     }
-     else
+     else 
       throw unwrap($e0);
   }
    finally {
@@ -8820,7 +8822,7 @@ function $onResponseReceived(this$static, response){
       e = $e0;
       caught = e;
     }
-     else
+     else 
       throw unwrap($e0);
   }
    finally {
@@ -9642,7 +9644,7 @@ function tryCommand(hasWidgets, c){
         !caught && (caught = new HashSet);
         $add_12(caught, e);
       }
-       else
+       else 
         throw unwrap($e0);
     }
   }
@@ -10394,7 +10396,7 @@ function $show(this$static){
   if (this$static.showing) {
     return;
   }
-   else
+   else 
     this$static.attached && $removeFromParent(this$static);
   $setState(this$static.resizeAnimation, true, false);
 }
@@ -14191,11 +14193,11 @@ _.parse_0 = function parse_1(dateBox, dateText, reportError){
           reportError && setStyleName(($clinit_DOM() , dateBox.element), 'dateBoxFormatError', true);
           return null;
         }
-         else
+         else 
           throw unwrap($e0);
       }
     }
-     else
+     else 
       throw unwrap($e1);
   }
   return date;
@@ -14824,7 +14826,7 @@ function $decideLogin(this$static){
         this$static.identificationUpdated = true;
         $disableAllTabs(this$static);
       }
-       else
+       else 
         throw unwrap($e0);
     }
   }
@@ -15088,7 +15090,7 @@ function $generatePrint(){
     if (instanceOf($e0, 22)) {
       printHTML += (!localizedStrings && (localizedStrings = new Locale_) , '<tr><td clospan="2">An error has occured during the calculation of the redistribution of funds!<\/td><\/tr>');
     }
-     else
+     else 
       throw unwrap($e0);
   }
   printHTML += '   <\/table>';
@@ -15286,7 +15288,7 @@ function refreshRepartition(){
       $printStackTrace(e, $clinit_System());
       throw unwrap(e);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16357,7 +16359,7 @@ function $addTransaction_0(this$static, token, transaction, callback){
     if (instanceOf($e0, 53)) {
       $errorOccured(callback.this$01.model, 'Error adding Transaction');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16378,7 +16380,7 @@ function $addTransactionComment_0(this$static, token, comment, callback){
     if (instanceOf($e0, 53)) {
       $errorOccured(callback.this$01.model, 'Error adding Comment');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16400,7 +16402,7 @@ function $addUser_0(this$static, token, u, callback){
       $clinit_System();
       $errorOccured(callback.this$01.model, 'Error adding User');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16427,7 +16429,7 @@ function $deleteTransaction_1(this$static, token, transaction, callback){
     if (instanceOf($e0, 53)) {
       $errorOccured(callback.this$01.model, 'Error deleting Transaction');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16449,7 +16451,7 @@ function $deleteUser_0(this$static, token, u, callback){
       $clinit_System();
       $errorOccured(callback.this$01.model, 'Error deleting User');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16469,7 +16471,7 @@ function $fetchTricount_0(this$static, tricountRandom, callback){
       ex = $e0;
       $onFailure(callback, ex);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16490,7 +16492,7 @@ function $getSuggestedFriends_1(this$static, token, FBSession, callback){
     if (instanceOf($e0, 53)) {
       $clinit_System();
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16512,7 +16514,7 @@ function $sendMail_0(this$static, token, email, callback){
       ex = $e0;
       $onFailure_0(callback);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16534,7 +16536,7 @@ function $updateTransaction_0(this$static, token, transaction, callback){
       $clinit_System();
       $errorOccured(callback.this$01.model, 'Error updating Transaction');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16556,7 +16558,7 @@ function $updateTricount_0(this$static, token, tricount, callback){
       $clinit_System();
       $errorOccured(callback.this$01.model, 'Error updating Tricount');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -16578,7 +16580,7 @@ function $updateUser_0(this$static, token, u, callback){
       $clinit_System();
       $errorOccured(callback.this$01.model, 'Error updating User');
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -17281,7 +17283,7 @@ _.parse_0 = function parse_2(dateBox, text_0, reportError){
     if (instanceOf($e0, 22)) {
       return null;
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -18379,7 +18381,7 @@ function $saveAndGetTransaction(this$static){
       if (instanceOf($e0, 54)) {
         return null;
       }
-       else
+       else 
         throw unwrap($e0);
     }
   }
@@ -18758,7 +18760,7 @@ function $synchAll(this$static){
         $setPartsAndAmount(this$static.complexModePanel, this$static.amountOfPartsOfUser, 0);
         $setPartsAndAmount_0(this$static.simpleModePanel, this$static.amountOfPartsOfUser, 0);
       }
-       else
+       else 
         throw unwrap($e0);
     }
   }
@@ -18865,7 +18867,7 @@ _.onChange = function onChange_2(event_0){
     if (instanceOf($e0, 22)) {
       $updatePartsAndAmountInModel(this.this$31.this$21, 0, -1);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -18892,7 +18894,7 @@ _.onChange = function onChange_3(event_0){
     if (instanceOf($e0, 22)) {
       $synchAll(this.this$31.this$21);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -19139,7 +19141,7 @@ function $refreshContent(this$static, equilibreAdded){
       setStylePrimaryName(tst1.element, 'summaryEqContent');
       $add_2(this$static.content_0, tst1);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -19516,7 +19518,7 @@ _.validate = function validate(){
       this.errorText = 'An unknown issue occurred and the expense could not be added. Please try again';
       return false;
     }
-     else
+     else 
       throw unwrap($e0);
   }
   return true;
@@ -19668,7 +19670,7 @@ _.validate_0 = function validate_4(s){
     if (instanceOf($e0, 54)) {
       return $clinit_TricountConstants() , !localizedStrings && (localizedStrings = new Locale_) , 'The amount must be a number smaller than 100 000 000';
     }
-     else
+     else 
       throw unwrap($e0);
   }
   return null;
@@ -19706,7 +19708,7 @@ _.validate_0 = function validate_5(s){
       if (instanceOf($e0, 23)) {
         return $clinit_TricountConstants() , !localizedStrings && (localizedStrings = new Locale_) , 'The date is not valid';
       }
-       else
+       else 
         throw unwrap($e0);
     }
   }
@@ -22618,7 +22620,7 @@ function arraycopy(src_0, srcOfs, dest, destOfs, len){
       }
     }
   }
-   else
+   else 
     len > 0 && nativeArraySplice(src_0, srcOfs, dest, destOfs, len, true);
 }
 
@@ -23393,7 +23395,7 @@ _.get_0 = function get_5(index_0){
     if (instanceOf($e0, 65)) {
       throw new IndexOutOfBoundsException_0("Can't get element " + index_0);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -23415,7 +23417,7 @@ _.remove_2 = function remove_26(index_0){
     if (instanceOf($e0, 65)) {
       throw new IndexOutOfBoundsException_0("Can't remove element " + index_0);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -23434,7 +23436,7 @@ _.set_0 = function set_2(index_0, element){
     if (instanceOf($e0, 65)) {
       throw new IndexOutOfBoundsException_0("Can't set element " + index_0);
     }
-     else
+     else 
       throw unwrap($e0);
   }
 }
@@ -25189,19 +25191,26 @@ setGwtProperty('permProps', [[['locale', 'default'], ['user.agent', 'safari']]])
 $sendStats('moduleStartup', 'moduleEvalEnd');
 
 var toExport = function(tricountKey, onSuccess, onFailure) {
-  TricountCommController$1.prototype.onSuccess = function (iResult) {
-      onSuccess(iResult)
-  }
 
-  TricountCommController$1.prototype.onFailure = function (iResult) {
-      onFailure(iResult)
-  }
-  const document = dom.window.document
-  const meta = document.createElement('meta')
-  meta.setAttribute('name', 'gwt:property')
-  meta.setAttribute('id', 'tricount:key')
-  meta.setAttribute('content', tricountKey)
-  document.querySelector('head').appendChild(meta)
+        const document = dom.window.document
+        const meta = document.createElement('meta')
+        meta.setAttribute('name', 'gwt:property')
+        meta.setAttribute('id', 'tricount:key')
+        meta.setAttribute('content', tricountKey)
+        document.querySelector('head').appendChild(meta)
+      
+
+
+        // Adds the meta tag to control which Tricount is fetched
+        TricountCommController$1.prototype.onSuccess = function (iResult) {
+            onSuccess(iResult)
+        }
+
+        TricountCommController$1.prototype.onFailure = function (iResult) {
+            onFailure(iResult)
+        }
+      
+
   gwtOnLoad(__gwtModuleFunction.__errFn, __gwtModuleFunction.__moduleName, __gwtModuleFunction.__moduleBase, __gwtModuleFunction.__softPermutationId,__gwtModuleFunction.__computePropValue);
 };
 

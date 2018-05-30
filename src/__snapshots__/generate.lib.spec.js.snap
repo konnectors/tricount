@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tricount transformer should transform the tricount script so that it can be used as a fetcher 1`] = `
+"
+
+      
+      // THIS FILE IS GENERATED AUTOMATICALLY BY generate.js
+
+      /* eslint-disable */
+
+      /**
+       * This file will be inserted before the Tricount script, it builds a JSDom home
+       * for the script.
+       */
+      const jsdom = require('jsdom')
+      const { JSDOM } = jsdom
+      const dom = new JSDOM(
+        \`<!DOCTYPE html><head>
+      </head>
+      <body>
+        <table>
+          <tbody>
+            <td id='slot1'></td> <!-- The controller needs this node -->
+          </tbody>
+        </table>
+      </body>
+      \`,
+        {
+          url: 'https://api.tricount.com', // Necessary for cross-site
+          referrer: 'https://api.tricount.com', // Necessary for cross-site
+          contentType: 'text/html',
+          userAgent: 'safari',
+          includeNodeLocations: true
+        }
+      )
+
+      var $wnd = dom.window
+
+      $wnd.com_tribab_tricount_Application = {
+        __sendStats: function() {},
+        __moduleBase: 'https://api.tricount.com/com.tribab.tricount.Application/',
+        __moduleName: 'com.tribab.tricount.Application'
+      }
+
+      $wnd.encodeURI = function() {
+        return ''
+      }
+
+      navigator = { // eslint-disable-line
+        userAgent: 'safari'
+      }
+
+      const document = dom.window.document // eslint-disable-line
+
+
+      blabla()
+      gwtStuff()
+
+      var toExport = function(tricountKey, onSuccess, onFailure) {
+
+            const document = dom.window.document
+            const meta = document.createElement('meta')
+            meta.setAttribute('name', 'gwt:property')
+            meta.setAttribute('id', 'tricount:key')
+            meta.setAttribute('content', tricountKey)
+            document.querySelector('head').appendChild(meta)
+                
+
+
+            // Adds the meta tag to control which Tricount is fetched
+            TricountCommController$1.prototype.onSuccess = function (iResult) {
+                onSuccess(iResult)
+            }
+
+            TricountCommController$1.prototype.onFailure = function (iResult) {
+                onFailure(iResult)
+            }
+                
+
+            gwtOnLoad()
+      };
+
+      afterGwtLoad()
+      module.exports = toExport
+    "
+`;
