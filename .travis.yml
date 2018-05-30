@@ -1,0 +1,41 @@
+language: node_js
+node_js:
+- '8'
+env:
+  global:
+  - GH_USER_EMAIL="travis@example.org"
+  - GH_USER_NAME="cozy-bot"
+  - DEPLOY_REPOSITORY="git@github.com:konnectors/tricount.git"
+  # REGISTRY_TOKEN(editor=cozy, apps=tricount)
+  - secure: qUMm7dXZAbrV6KD4q1XhGq6jtbaDz+D1yeJxpOWvnDaH7tIfO7fjriplbD+n7/LkwbOo2Kp2YZrjvj69O7/MnvWzfQ3JCyF5qwOmIqLGze2Huw8HnvspZTdW38Fo9vwgMLOweX273FqPbRMKWtwaiC5nGy1S78XlP0qxpW2IML/aVJ8A1JadS/Wl7wZDRS0/HrA16o1viFb41YW9LIVgqpIaEimf84jVtVi4cWMwQavFUQeKujgtJt6Vx862iePvYKY8zZWaNgxc5WzEWVMQPfAn4oWVh2f50fHbf7z2fVUW8M52f0k9MZvuNDwXSM0K2GgejzOekGUmPHqycv3Rma5iyA5ykzTfmqJJrBQXQSVvWuMOKvvCVCr7UVKb2T6J2bHmV8czrh2fpRF0KlrOaDvFgGGSK7XYv+S3PvIzbN/lZZVNFkZZmCCEVQaGblvulyj41nkaS7FnCyQ3icH6EHjaMHKiQxWXryBhBW26+D8yJ9/NyklSrw9rUJPESlc7WtZsTQU7mlKjUrgmeX3wHPyJwh1+YRGhHrvQLJpSKqDOloElEwrZAFU+XdbbZizdrZ8pGiqw9A+oc+BsgWASoYCM4uRYRuvwym5FgwOZhknDayZ9DIDI20WbQrPEYTtYobXQFTLJTpf717GKIW6xfohgAYbt6CeJFaOehqvr4sw=
+cache:
+  yarn: true
+  directories:
+  - node_modules
+branches:
+  except:
+  - build
+  - latest
+script:
+- yarn lint
+- yarn build
+deploy:
+- provider: script
+  skip-cleanup: true
+  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish
+  on:
+    branch: master
+- provider: script
+  skip-cleanup: true
+  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish
+  on:
+    tags: true
+before_install:
+- openssl aes-256-cbc -K $encrypted_36216847a3eb_key -iv $encrypted_36216847a3eb_iv
+  -in github_deploy_key.enc -out /tmp/github_deploy_key -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/github_deploy_key
+- ssh-add /tmp/github_deploy_key
+after_deploy:
+- rm /tmp/github_deploy_key
+- ssh-add -D

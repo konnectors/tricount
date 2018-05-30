@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "name": "Tricount connector",
+  "type": "konnector",
+  "language": "node",
+  "icon": "icon.png",
+  "slug": "tricount",
+  "source": "git://github.com/konnectors/tricount.git",
+  "editor": "Cozy",
+  "vendor_link": "Link to the target website",
+  "categories": ["other"],
+  "fields": {
+    "tricountUrl": {
+      "type": "text"
+    }
+  },
+  "data_types": [
+    "bill"
+  ],
+  "screenshots": [],
+  "permissions": {
+    "tricount expenses": {
+      "type": "com.tricount.expenses"
+    }
+  },
+  "developer": {
+    "name": "Cozy Cloud",
+    "url": "https://cozy.io"
+  },
+  "langs": ["fr", "en"],
+  "locales": {
+    "fr": {
+      "short_description": "Connecteur Tricount",
+      "long_description": "Ce connecteur récupère une liste de dépenses Tricount",
+      "permissions": {
+        "tricount expenses": {
+          "description": "Utilisé pour sauver les dépenses"
+        }
+      }
+    },
+    "en": {
+      "short_description": "Tricount connector",
+      "long_description": "This connector retrieves Tricount expenses",
+      "permissions": {
+        "tricount expenses": {
+          "description": "Uses to save expenses"
+        }
+      }
+    }
+  },
+  "manifest_version": "2"
+}
