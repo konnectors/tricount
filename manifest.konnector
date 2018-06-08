@@ -8,7 +8,7 @@
   "source": "git://github.com/konnectors/tricount.git",
   "editor": "Cozy",
   "vendor_link": "Link to the target website",
-  "categories": ["other"],
+  "categories": ["online_services"],
   "fields": {
     "tricountUrl": {
       "type": "text"
