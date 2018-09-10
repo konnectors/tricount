@@ -7496,9 +7496,9 @@ rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
 
-rxjs-compat@6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.3.1.tgz#9ad8a76110bb0f37fa7906be377909970135b909"
+rxjs-compat@6.3.2:
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.3.2.tgz#2386ade05e693480fdf96f56042a629aef6c5ea5"
 
 rxjs@6.3.2:
   version "6.3.2"
