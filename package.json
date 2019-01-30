@@ -47,7 +47,7 @@
     "jest": "23.6.0",
     "jscodeshift": "0.6.3",
     "konitor": "0.10.1",
-    "rxjs": "6.3.3",
+    "rxjs": "6.4.0",
     "rxjs-compat": "6.3.3",
     "webpack": "4.19.1",
     "webpack-cli": "2.1.5"
