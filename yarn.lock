@@ -2720,9 +2720,9 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cozy-app-publish@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/cozy-app-publish/-/cozy-app-publish-0.12.0.tgz#83ee95d42891d1017cd1138847a96f20a6ebbf6f"
+cozy-app-publish@0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/cozy-app-publish/-/cozy-app-publish-0.12.1.tgz#204209982fbff79639e42ba72b515bffbfcd27a9"
   dependencies:
     chalk "2.4.2"
     commander "2.19.0"
