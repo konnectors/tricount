@@ -2704,14 +2704,15 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cozy-app-publish@0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/cozy-app-publish/-/cozy-app-publish-0.12.2.tgz#1facfe3b1aff06de13b73852c9bdfadeed06a79f"
+cozy-app-publish@0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/cozy-app-publish/-/cozy-app-publish-0.13.1.tgz#7fa5bf25cb4f1a7fec436e177e0389d963480dff"
   dependencies:
     chalk "2.4.2"
     commander "2.19.0"
     cross-spawn "6.0.5"
     fs-extra "7.0.1"
+    lodash "4.17.11"
     node-fetch "2.3.0"
     prompt "1.0.0"
     request "2.88.0"
