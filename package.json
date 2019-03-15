@@ -50,6 +50,6 @@
     "rxjs": "6.4.0",
     "rxjs-compat": "6.4.0",
     "webpack": "4.19.1",
-    "webpack-cli": "2.1.5"
+    "webpack-cli": "3.3.0"
   }
 }
